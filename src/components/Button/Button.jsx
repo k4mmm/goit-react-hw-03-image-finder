@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { LoadMore } from "./Button.styled";
 export const Button = ({ onSubmit, page, hits }) => {
   const submit = (e) => {
@@ -11,4 +12,10 @@ export const Button = ({ onSubmit, page, hits }) => {
       </LoadMore>
     )
   );
+};
+
+Button.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+  page: PropTypes.number.isRequired,
+  hits: PropTypes.number.isRequired,
 };

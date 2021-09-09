@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import toast from "react-hot-toast";
+import PropTypes from "prop-types";
 import {
   ButtonLabel,
   SearchButton,
@@ -49,3 +50,7 @@ export default class Searchbar extends Component {
     );
   }
 }
+
+Searchbar.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};

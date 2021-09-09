@@ -1,5 +1,5 @@
 import { ModalImg, Overlay } from "./Modal.styled";
-
+import PropTypes from "prop-types";
 import React, { Component } from "react";
 
 export default class Modal extends Component {
@@ -28,3 +28,8 @@ export default class Modal extends Component {
     );
   }
 }
+
+Modal.propTypes = {
+  keyDown: PropTypes.func.isRequired,
+  modalSrc: PropTypes.string.isRequired,
+};
